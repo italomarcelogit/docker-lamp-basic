@@ -1,4 +1,5 @@
 # Docker LAMP - linux|mariadb|php
+![ScreenShot](img.png)
 
 Exemplo básico para construir container em docker com linux, mariadb e PHP
 
