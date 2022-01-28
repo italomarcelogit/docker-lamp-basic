@@ -9,17 +9,17 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 
-CREATE TABLE `Person` (
+CREATE TABLE `Visitante` (
   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `name` varchar(20) NOT NULL,
-  `surname` varchar(20) NOT NULL
+  `vnome` varchar(50) NOT NULL,
+  `vcargo` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
-INSERT INTO `Person` (`id`, `name`, `surname`) VALUES
-(1, 'Andre', 'Silva'),
-(2, 'Lucas', 'Costa'),
-(3, 'Renato', 'Oliveira');
+INSERT INTO `Visitante` (`id`, `vnome`, `vcargo`) VALUES
+(1, 'Andre', 'Coder'),
+(2, 'Lucas', 'Publisher'),
+(3, 'Renato', 'Designer');
 
 
 

@@ -1,11 +1,12 @@
-version: "3.8"
+version: "3.7"
 services:
     www:
         build: .
+        # image: italomarcelo/php7.2-apache
         ports: 
-            - "8001:80"
+            - "80:80"
         volumes:
-            - ./www:/var/www/html/
+            - "./www:/var/www/html/"
         links:
             - db
         networks:
@@ -21,8 +22,8 @@ services:
             MYSQL_PASSWORD: test
             MYSQL_ROOT_PASSWORD: test 
         volumes:
-            - ./dump:/docker-entrypoint-initdb.d
-            - ./conf:/etc/mysql/conf.d
+            - "./dump:/docker-entrypoint-initdb.d"
+            - "./conf:/etc/mysql/conf.d"
             - persistent:/var/lib/mysql
         networks:
             - default
@@ -31,7 +32,7 @@ services:
         links: 
             - db:db
         ports:
-            - 8000:80
+            - 8081:80
         environment:
             MYSQL_USER: user
             MYSQL_PASSWORD: test
