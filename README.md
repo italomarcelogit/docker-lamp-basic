@@ -7,6 +7,9 @@ Para executar será necessário instalar o Docker Compose (sugiro instalar o Doc
 - no terminar da sua IDE preferida ou mesmo no console do SO que está utilizando, digite docker-compose up -d (para executar em background.
 - para finalizar, docker-compose down
 
+Importante:
+- as informações de usuários e senhas aparentes são somente para dar um exemplo, portanto, não utilize dessa maneira em produção.
+
 Este exemplo está com volume persistente, ou seja, ao parar o seu container, os seus dados não serão excluídos.
 
 Excelente aprendizado!!!
