@@ -1,0 +1,4 @@
+# italo
+RewriteEngine On
+RewriteRule ^([a-z]+)\/([a-z]+)$ /index.php?modulo=$1&id=$2 [NC,L]
+RewriteRule ^([a-z]+)\/([0-9]+)$ /index.php?modulo=$1&id=$2 [NC,L]
