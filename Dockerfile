@@ -1,7 +1,7 @@
-FROM php:7.2-apache
+FROM php:apache
 # útil para fazer redirecionamento no .htaccess
 RUN a2enmod rewrite 
-# install e setup pdo database
+# atualizando pod
 RUN docker-php-ext-install pdo pdo_mysql
 RUN apt-get update \
     && apt-get install -y libzip-dev \
@@ -9,3 +9,5 @@ RUN apt-get update \
     && apt-get install -y vim \
     && rm -rf /var/lib/apt/lists/* \
     && docker-php-ext-install zip
+
+COPY ./www /var/www/html

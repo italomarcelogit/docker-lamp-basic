@@ -18,6 +18,7 @@
     />
 </head>
 <?php
+error_reporting(E_ERROR | E_PARSE);
 include('_mysetup.php');
 
 
@@ -25,17 +26,19 @@ try {
     $conn = new PDO("mysql:host=$servername;dbname=".$database, $username, $password);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $msg = "Status: Connected successfully";
+    $msg = "Status: Conectado com sucesso";
 }
 catch(PDOException $e) {
-     $msg = "status: Connection failed: " . $e->getMessage();
+     $msg = "status: Erro na conexão: " . $e->getMessage();
 }
+$msghost = gethostname();
 ?>
 <body>
     <div class="container">
         <h1><?php echo "Docker LAMP - linux|mariadb|php"; ?></h1>
         <h4><?php echo 'Ação: '. $_GET['modulo']. ' '; ?></h4>
-        <h6><?php echo $msg; ?></h6>
+        <h5><?php echo $msg; ?></h5>
+        <h6>Host: <?php echo $msghost; ?> - IP: <?php echo $_SERVER['REMOTE_ADDR'];?></h6>
         <?php
         if ($_SERVER['REQUEST_URI'] == '/'):
         ?>

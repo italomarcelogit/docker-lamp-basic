@@ -17,9 +17,9 @@ CREATE TABLE `Visitante` (
 
 
 INSERT INTO `Visitante` (`id`, `vnome`, `vcargo`) VALUES
-(1, 'Andre', 'Coder'),
-(2, 'Lucas', 'Publisher'),
-(3, 'Renato', 'Designer');
+(1, 'Joao', 'Coder'),
+(2, 'Maria', 'Publisher'),
+(3, 'Andrea', 'Designer');
 
 
 
