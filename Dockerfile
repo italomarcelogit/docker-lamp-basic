@@ -1,4 +1,4 @@
-FROM php:apache
+FROM php
 # útil para fazer redirecionamento no .htaccess
 RUN a2enmod rewrite 
 # atualizando pod
